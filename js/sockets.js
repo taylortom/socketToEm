@@ -3,10 +3,10 @@ var io = require('socket.io');
 module.exports = function Sockets(app) {
   var s = io(app.http);
   var users = 0;
-  
+
   s.on('connection', function(socket){
     console.log('a user connected');
-    s.emit('users', ++users);
+    s.emit('user:enter', ++users);
 
     socket.on('message', function(msg){
       console.log('message: ' + msg);
@@ -15,7 +15,7 @@ module.exports = function Sockets(app) {
 
     socket.on('disconnect', function(){
       console.log('user disconnected');
-      s.emit('users', --users);
+      s.emit('user:leave', --users);
     });
   });
 };
