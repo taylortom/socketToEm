@@ -10,6 +10,7 @@ function App() {
   this.constructor = function() {
     console.log('Loading app...');
     this.model = {
+      port: process.env.port || 3000,
       title: 'Hello Sockets!'
     };
 
@@ -34,8 +35,8 @@ function App() {
     this.server.set('views', '');
     this.http = http.Server(this.server);
     // start listening
-    this.http.listen(3000, function () {
-      console.log('Server listening on port 3000');
+    this.http.listen(this.model.port, function () {
+      console.log('Server listening on port', app.model.port);
     });
   };
 

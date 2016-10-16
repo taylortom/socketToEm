@@ -3,7 +3,7 @@ var io = require('socket.io');
 module.exports = function Sockets(app) {
   var s = io(app.http);
   var users = 0;
-
+  
   s.on('connection', function(socket){
     console.log('a user connected');
     s.emit('users', ++users);
