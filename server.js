@@ -4,11 +4,12 @@ var http = require('http');
 var path = require('path');
 
 var sockets = require('./js/sockets');
+var logger = require('./js/logger');
 
 function App() {
   var app = this;
   this.constructor = function() {
-    console.log('Loading app...');
+    logger('Loading app...');
     this.model = {
       port: process.env.PORT || 3000,
       title: 'Hello Sockets!'
@@ -36,7 +37,7 @@ function App() {
     this.http = http.Server(this.server);
     // start listening
     this.http.listen(this.model.port, function () {
-      console.log('Server listening on port', app.model.port);
+      logger('Server listening on port', app.model.port);
     });
   };
 
