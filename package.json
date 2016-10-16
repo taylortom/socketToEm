@@ -1,0 +1,29 @@
+{
+  "name": "sockettoem",
+  "version": "0.0.1",
+  "description": "Messing around in web sockets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylortom/socketToEm.git"
+  },
+  "keywords": [
+    "web-sockets"
+  ],
+  "author": "Thomas Taylor <me@taylortom.co.uk> (http://taylortom.co.uk/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taylortom/socketToEm/issues"
+  },
+  "homepage": "https://github.com/taylortom/socketToEm#readme",
+  "dependencies": {
+    "async": "^2.1.1",
+    "express": "^4.14.0",
+    "express-hbs": "^1.0.3",
+    "socket.io": "^1.5.0",
+    "underscore": "^1.8.3"
+  }
+}
