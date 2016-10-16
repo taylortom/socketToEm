@@ -10,7 +10,7 @@ function App() {
   this.constructor = function() {
     console.log('Loading app...');
     this.model = {
-      port: process.env.port || 3000,
+      port: process.env.PORT || 3000,
       title: 'Hello Sockets!'
     };
 
